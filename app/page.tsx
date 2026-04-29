@@ -48,7 +48,7 @@ export default function Home() {
     setTimeout(() => {
       setIsSubmitting(false);
       alert("Thank you! Your personalized care plan request has been received.");
-      setStep(1); 
+      setStep(1);
       setAnswers({
         relationship: "", femaleAge: "", maleAge: "", duration: "", concern: "",
         priorTreatment: "", location: "", name: "", email: "", phone: "", date: ""
@@ -77,38 +77,39 @@ export default function Home() {
 
   const doctors = [
     {
-      name: "Dr. Anjali Sharma",
-      role: "Lead Fertility Specialist",
-      qualifications: "MD, DGO, Fellowship in Reproductive Medicine",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
-      bio: "With over 15 years of experience in assisted reproduction, Dr. Sharma has helped thousands of families achieve their dreams. She specializes in complex IVF cases and recurrent implantation failure."
+      name: "Dr. Anjali R",
+      role: "Consultant - Fetal Medicine",
+      qualifications: "MBBS, MS (OBG), DNB, MNAMS, Fellowship in Fetal Medicine",
+      image: "https://www.motherhoodindia.com/wp-content/uploads/2025/06/Electronic-City_Dr.-Anjali-R1_MHI_Website_314x382-247x300.jpg",
+      bio: "With over 8+ years of experience, Dr. Anjali specializes in fetal medicine and comprehensive antenatal care, providing expert guidance throughout your pregnancy."
     },
     {
-      name: "Dr. Rahul Verma",
-      role: "Senior Embryologist",
-      qualifications: "PhD in Clinical Embryology",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop",
-      bio: "Dr. Verma heads our state-of-the-art laboratory. His pioneering work in embryo culture and PGT-A testing ensures that our patients receive the highest standard of scientific care."
+      name: "Dr. Pooja Ramesh",
+      role: "Consultant - Obstetrician & Gynaecologist",
+      qualifications: "MS (Obstetrics & Gynaecology), MBBS",
+      image: "https://www.motherhoodindia.com/wp-content/uploads/2025/12/E-City_Dr.-Pooja-Ramesh-E-city_Website_314x382.jpg-247x300.jpeg",
+      bio: "Dr. Pooja brings 7+ years of clinical expertise. Known for her compassionate approach, she focuses on high-risk pregnancies and minimally invasive gynecological procedures."
     },
     {
-      name: "Dr. Priya Desai",
-      role: "Consultant Gynecologist & IVF Expert",
-      qualifications: "MS (OBG), DRM (Germany)",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
-      bio: "Known for her compassionate approach, Dr. Desai focuses on fertility preservation and minimally invasive reproductive surgeries. She believes in treating the patient, not just the diagnosis."
+      name: "Dr. Manu C",
+      role: "Consultant - Neonatologist and Paediatric",
+      qualifications: "MBBS, DCH, Fellowship in neonatology (FRGUHS), PGPN (Boston)",
+      image: "https://www.motherhoodindia.com/wp-content/uploads/2026/01/E-City_Dr.-Manu-C_MHI_Website_314x382-247x300.jpg",
+      bio: "With 9 years of dedicated experience, Dr. Manu is a highly skilled neonatologist ensuring the utmost care for newborns and children with specialized pediatric support."
     }
   ];
 
   const videos = [
     {
+      title: "Motherhood Hospital Electronic City Tour",
+      thumbnail: "https://img.youtube.com/vi/P8yYTE1Kkos/maxresdefault.jpg",
+      youtubeId: "P8yYTE1Kkos",
+      duration: "1:41"
+    },
+    {
       title: "A Walkthrough of Our Facility",
       thumbnail: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
       duration: "2:45"
-    },
-    {
-      title: "Patient Care: What to Expect",
-      thumbnail: "https://images.unsplash.com/photo-1584516150909-c43483ee7932?q=80&w=800&auto=format&fit=crop",
-      duration: "4:12"
     },
     {
       title: "Inside the Embryology Lab",
@@ -119,22 +120,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#f8f5fc] via-white to-[#f3e8ff] text-[#2d1b3d] font-sans selection:bg-[#d8b4fe] selection:text-[#2d1b3d] overflow-x-hidden">
-      
+
       {/* Header */}
       <header className={`w-full transition-all duration-300 sticky top-0 z-50 flex flex-col ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-[#fcfaff]'}`}>
         {/* Top bar (Logo & Contact) */}
         <div className="px-6 py-4 flex items-center justify-between border-b border-[#e9d5ff]/40">
           <div className="flex items-center gap-3 cursor-pointer group">
             <div className="relative">
-              <img 
-                src="https://progressive.motherhoodivf.com/favicon.svg" 
-                alt="Progressive Motherhood Logo" 
-                className="w-8 h-8 md:w-10 md:h-10 drop-shadow-sm group-hover:scale-110 transition-transform duration-300"
+              <img
+                src="https://www.motherhoodindia.com/wp-content/uploads/2019/02/Apple.png"
+                alt="Motherhood Logo"
+                className="w-8 h-8 md:w-10 md:h-10 drop-shadow-sm group-hover:scale-110 transition-transform duration-300 rounded-full"
               />
               <div className="absolute inset-0 bg-[#d8b4fe] blur-md opacity-0 group-hover:opacity-40 transition-opacity rounded-full"></div>
             </div>
             <span className="text-xl md:text-2xl font-semibold tracking-tight text-[#4c2d6b]">
-              Progressive Motherhood
+              Motherhood Hospital
             </span>
           </div>
           <button className="text-sm md:text-base font-medium px-5 py-2 rounded-full text-white bg-gradient-to-r from-[#9333ea] to-[#7e22ce] hover:from-[#7e22ce] hover:to-[#6b21a8] transition-all duration-300 shadow-sm hover:shadow active:scale-95 hidden md:block">
@@ -143,50 +144,42 @@ export default function Home() {
         </div>
 
         {/* Bottom bar (Navigation) */}
-        <div className="w-full overflow-x-auto justify-center border-b border-[#e9d5ff]/50 bg-[#f6f5f8] hidden md:flex">
+        <div className="w-full overflow-x-auto border-b border-[#e9d5ff]/50 bg-[#f6f5f8] flex md:justify-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <nav className="flex items-center text-[13px] font-medium tracking-wider text-[#5c3c82] py-2.5 px-4 min-w-max">
-            <a href="#" className="hover:text-[#9333ea] transition-colors px-4 py-1">HOME</a>
+            <a href="#home" className="hover:text-[#9333ea] transition-colors px-4 py-1">HOME</a>
             <span className="text-[#5c3c82] font-light">|</span>
-            <a href="#" className="hover:text-[#9333ea] transition-colors px-4 py-1">ABOUT US</a>
+            <a href="#about" className="hover:text-[#9333ea] transition-colors px-4 py-1">ABOUT US</a>
             <span className="text-[#5c3c82] font-light">|</span>
-            <a href="#" className="text-[#c026d3] hover:text-[#a21caf] transition-colors px-4 py-1">FIND A DOCTOR</a>
+            <a href="#doctors" className="text-[#c026d3] hover:text-[#a21caf] transition-colors px-4 py-1">FIND A DOCTOR</a>
             <span className="text-[#5c3c82] font-light">|</span>
-            <div className="group relative px-4 py-1 cursor-pointer hover:text-[#9333ea] transition-colors flex items-center gap-1.5">
-              SPECIALTIES
-              <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-            </div>
+            <a href="#contact" className="hover:text-[#9333ea] transition-colors px-4 py-1">CONTACT US</a>
             <span className="text-[#5c3c82] font-light">|</span>
-            <a href="#" className="hover:text-[#9333ea] transition-colors px-4 py-1">CONTACT US</a>
-            <span className="text-[#5c3c82] font-light">|</span>
-            <div className="group relative px-4 py-1 cursor-pointer hover:text-[#9333ea] transition-colors flex items-center gap-1.5">
-              PATIENT CARE & SERVICES
-              <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-            </div>
-            <span className="text-[#5c3c82] font-light">|</span>
-            <div className="group relative px-4 py-1 cursor-pointer hover:text-[#9333ea] transition-colors flex items-center gap-1.5">
-              MORE
-              <svg className="w-2.5 h-2.5 fill-current" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
-            </div>
+            <a href="#videos" className="hover:text-[#9333ea] transition-colors px-4 py-1">FACILITY TOUR</a>
           </nav>
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center">
-        
+      <main id="home" className="max-w-5xl mx-auto px-6 py-12 md:py-20 flex flex-col items-center">
+
+        {/* Banner Image */}
+        <div className="w-full max-w-4xl mb-12 rounded-[2rem] overflow-hidden shadow-2xl animate-fade-in">
+          <img src="https://www.motherhoodindia.com/wp-content/uploads/2025/08/Location-Page-Banner_Electronic-City_Mobile_578X364-px.jpg" alt="Motherhood Hospital Electronic City" className="w-full h-auto object-cover" />
+        </div>
+
         {/* Hero Section */}
         <div className="text-center max-w-3xl mb-16 animate-fade-in-up">
           <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#f3e8ff] to-white border border-[#e9d5ff] text-[#6b21a8] text-sm font-semibold mb-6 shadow-sm hover:shadow-md transition-shadow cursor-default animate-float">
-            ✨ Compassionate & Personalized Care
+            ✨ Best Maternity Hospital in Electronic City
           </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#3b0764] mb-6 leading-tight">
-            Your Journey to <br className="hidden md:block"/> Parenthood Starts Here
+            Your Journey to <br className="hidden md:block" /> Parenthood Starts Here
           </h1>
           <p className="text-lg md:text-xl text-[#6b21a8]/80 max-w-2xl mx-auto leading-relaxed mb-8">
-            Navigating fertility can feel overwhelming, but you don't have to do it alone. 
-            At Progressive Motherhood, we combine cutting-edge science with deep compassion.
+            Navigating fertility and maternity can feel overwhelming, but you don't have to do it alone.
+            At Motherhood Hospital, Electronic City, we combine cutting-edge science with deep compassion.
             Answer a few quick questions to discover a personalized care path designed just for you.
           </p>
-          
+
           {/* Trust Indicators */}
           <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-sm font-medium text-[#6b21a8] mt-8 opacity-90">
             <span className="flex items-center gap-2 hover:text-[#9333ea] transition-colors">
@@ -205,11 +198,11 @@ export default function Home() {
         </div>
 
         {/* Questionnaire Card */}
-        <div className="w-full max-w-xl bg-white rounded-[2rem] shadow-xl shadow-purple-900/5 border border-[#f3e8ff] overflow-hidden mb-24 relative hover:shadow-2xl hover:shadow-purple-900/10 transition-all duration-500 transform hover:-translate-y-1">
-          
+        <div id="contact" className="w-full max-w-xl bg-white rounded-[2rem] shadow-xl shadow-purple-900/5 border border-[#f3e8ff] overflow-hidden mb-24 relative hover:shadow-2xl hover:shadow-purple-900/10 transition-all duration-500 transform hover:-translate-y-1">
+
           {/* Progress Bar */}
           <div className="h-1.5 w-full bg-[#f8f5fc]">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-[#d8b4fe] to-[#9333ea] transition-all duration-700 ease-out"
               style={{ width: `${(step / 7) * 100}%` }}
             />
@@ -340,11 +333,11 @@ export default function Home() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="group">
                     <label className="block text-sm font-medium text-[#4c2d6b] mb-1.5">Select Location</label>
-                    <select 
+                    <select
                       required
                       className="w-full px-4 py-3 rounded-xl border-2 border-[#f3e8ff] bg-[#fcfaff] focus:bg-white focus:ring-4 focus:ring-purple-100 focus:border-[#c084fc] outline-none transition-all duration-300"
                       value={answers.location}
-                      onChange={(e) => setAnswers({...answers, location: e.target.value})}
+                      onChange={(e) => setAnswers({ ...answers, location: e.target.value })}
                     >
                       <option value="" disabled>Choose a location</option>
                       <option value="Bangalore">Bangalore</option>
@@ -355,40 +348,40 @@ export default function Home() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="group">
-                      <input 
+                      <input
                         required type="text" placeholder="Full Name"
                         className="w-full px-4 py-3 rounded-xl border-2 border-[#f3e8ff] bg-[#fcfaff] focus:bg-white focus:ring-4 focus:ring-purple-100 focus:border-[#c084fc] outline-none transition-all"
-                        value={answers.name} onChange={(e) => setAnswers({...answers, name: e.target.value})}
+                        value={answers.name} onChange={(e) => setAnswers({ ...answers, name: e.target.value })}
                       />
                     </div>
                     <div className="group">
-                      <input 
+                      <input
                         required type="tel" placeholder="Phone Number"
                         className="w-full px-4 py-3 rounded-xl border-2 border-[#f3e8ff] bg-[#fcfaff] focus:bg-white focus:ring-4 focus:ring-purple-100 focus:border-[#c084fc] outline-none transition-all"
-                        value={answers.phone} onChange={(e) => setAnswers({...answers, phone: e.target.value})}
+                        value={answers.phone} onChange={(e) => setAnswers({ ...answers, phone: e.target.value })}
                       />
                     </div>
                   </div>
-                  
+
                   <div className="group">
-                    <input 
+                    <input
                       required type="email" placeholder="Email Address"
                       className="w-full px-4 py-3 rounded-xl border-2 border-[#f3e8ff] bg-[#fcfaff] focus:bg-white focus:ring-4 focus:ring-purple-100 focus:border-[#c084fc] outline-none transition-all"
-                      value={answers.email} onChange={(e) => setAnswers({...answers, email: e.target.value})}
+                      value={answers.email} onChange={(e) => setAnswers({ ...answers, email: e.target.value })}
                     />
                   </div>
 
                   <div className="group">
                     <label className="block text-sm font-medium text-[#4c2d6b] mb-1.5 mt-2">Preferred Appointment Date</label>
-                    <input 
+                    <input
                       required type="date"
                       className="w-full px-4 py-3 rounded-xl border-2 border-[#f3e8ff] bg-[#fcfaff] focus:bg-white focus:ring-4 focus:ring-purple-100 focus:border-[#c084fc] outline-none transition-all text-[#4c2d6b]"
-                      value={answers.date} onChange={(e) => setAnswers({...answers, date: e.target.value})}
+                      value={answers.date} onChange={(e) => setAnswers({ ...answers, date: e.target.value })}
                     />
                   </div>
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     disabled={isSubmitting}
                     className="w-full mt-6 bg-gradient-to-r from-[#9333ea] to-[#7e22ce] hover:from-[#7e22ce] hover:to-[#6b21a8] text-white font-bold py-4 rounded-xl shadow-xl shadow-purple-900/20 transform transition-all duration-300 active:scale-[0.98] flex justify-center items-center gap-2 group relative overflow-hidden"
                   >
@@ -412,7 +405,7 @@ export default function Home() {
             {/* Navigation Buttons */}
             {step > 1 && (
               <div className="mt-8 pt-6 border-t border-[#f3e8ff] flex justify-between items-center animate-fade-in">
-                <button 
+                <button
                   onClick={prevStep}
                   className="text-[#9333ea] font-medium hover:text-[#6b21a8] flex items-center gap-1 transition-all duration-200 px-4 py-2 rounded-lg hover:bg-[#f3e8ff] active:scale-95 group"
                 >
@@ -430,19 +423,19 @@ export default function Home() {
         </div>
 
         {/* Meet Our Expert Doctors */}
-        <div className="w-full max-w-5xl mb-24 animate-fade-in">
+        <div id="doctors" className="w-full max-w-5xl mb-24 animate-fade-in">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-1.5 rounded-full bg-[#f3e8ff] text-[#9333ea] text-sm font-bold tracking-wider uppercase mb-4">Our Specialists</div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-4">Meet Our Expert Doctors</h2>
-            <p className="text-[#6b21a8]/80 text-lg max-w-2xl mx-auto">Our team of globally trained fertility specialists and embryologists are dedicated to making your dream of parenthood a reality.</p>
+            <p className="text-[#6b21a8]/80 text-lg max-w-2xl mx-auto">Our team of globally trained specialists are dedicated to making your dream of parenthood a reality.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {doctors.map((doctor, i) => (
               <div key={i} className="group bg-white rounded-[2rem] overflow-hidden border border-[#f3e8ff] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
                 <div className="aspect-[4/5] relative overflow-hidden">
-                  <img 
-                    src={doctor.image} 
-                    alt={doctor.name} 
+                  <img
+                    src={doctor.image}
+                    alt={doctor.name}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#2d1b3d]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -459,16 +452,16 @@ export default function Home() {
         </div>
 
         {/* Experience Our Care (Dummy Videos) */}
-        <div className="w-full max-w-5xl mb-24 animate-fade-in">
+        <div id="videos" className="w-full max-w-5xl mb-24 animate-fade-in">
           <div className="text-center mb-12">
             <div className="inline-block px-4 py-1.5 rounded-full bg-[#f3e8ff] text-[#9333ea] text-sm font-bold tracking-wider uppercase mb-4">Experience Our Care</div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-4">See Progressive Motherhood in Action</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-4">See Motherhood Hospital in Action</h2>
             <p className="text-[#6b21a8]/80 text-lg max-w-2xl mx-auto">Take a virtual tour of our state-of-the-art facilities and hear directly from our care team.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {videos.map((video, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="group relative rounded-[2rem] overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
                 onClick={() => setActiveVideo(i)}
               >
@@ -491,38 +484,53 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Video Modal (Mock) */}
+        {/* Video Modal */}
         {activeVideo !== null && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#2d1b3d]/80 backdrop-blur-sm animate-fade-in">
             <div className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl">
-              <button 
+              <button
                 onClick={() => setActiveVideo(null)}
                 className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
               <div className="aspect-video relative bg-black flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 border-4 border-[#9333ea]/30 border-t-[#9333ea] rounded-full animate-spin mx-auto mb-4"></div>
-                  <p className="text-white/60 font-medium tracking-wide">Loading video stream...</p>
-                </div>
-                {/* Mock image instead of actual video for demo */}
-                <img src={videos[activeVideo].thumbnail} alt="Video playback" className="absolute inset-0 w-full h-full object-cover opacity-50" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
-                  <h3 className="text-white text-xl font-bold">{videos[activeVideo].title}</h3>
-                </div>
+                {/* Check if we have a youtubeId to render iframe, otherwise fallback to image */}
+                {(videos[activeVideo] as any).youtubeId ? (
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${(videos[activeVideo] as any).youtubeId}?autoplay=1`}
+                    title={videos[activeVideo].title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                ) : (
+                  <>
+                    <div className="text-center">
+                      <div className="w-16 h-16 border-4 border-[#9333ea]/30 border-t-[#9333ea] rounded-full animate-spin mx-auto mb-4"></div>
+                      <p className="text-white/60 font-medium tracking-wide">Loading video stream...</p>
+                    </div>
+                    {/* Mock image instead of actual video for demo */}
+                    <img src={videos[activeVideo].thumbnail} alt="Video playback" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent">
+                      <h3 className="text-white text-xl font-bold">{videos[activeVideo].title}</h3>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
         )}
 
         {/* Our Approach / More Text Section */}
-        <div className="w-full max-w-4xl text-center mb-24 animate-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-6">Why Choose Progressive Motherhood?</h2>
+        <div id="about" className="w-full max-w-4xl text-center mb-24 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-6">Why Choose Motherhood Hospital?</h2>
           <p className="text-[#6b21a8]/80 leading-relaxed mb-12 max-w-3xl mx-auto text-lg">
             We understand that the journey to parenthood is deeply personal and sometimes challenging. Our philosophy is rooted in treating the whole person, not just the diagnosis. From your very first consultation, you'll experience a supportive environment where your questions are answered, your concerns are validated, and your family-building dreams are nurtured with the highest standard of medical excellence.
           </p>
-          
+
           {/* Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-8 rounded-3xl bg-white/60 backdrop-blur-md border border-[#f3e8ff] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
@@ -553,7 +561,7 @@ export default function Home() {
         <div className="w-full max-w-5xl mb-24 animate-fade-in">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-4">Patient Success Stories</h2>
-            <p className="text-[#6b21a8]/80 text-lg">Hear from families who started their journey with Progressive Motherhood.</p>
+            <p className="text-[#6b21a8]/80 text-lg">Hear from families who started their journey with Motherhood Hospital.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -628,14 +636,14 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#3b0764] mb-4">Frequently Asked Questions</h2>
             <p className="text-[#6b21a8]/80 text-lg">Everything you need to know about starting your journey with us.</p>
           </div>
-          
+
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`border-2 rounded-2xl transition-all duration-300 overflow-hidden ${openFaq === index ? 'border-[#c084fc] bg-white shadow-md' : 'border-[#e9d5ff] bg-[#fcfaff] hover:border-[#d8b4fe]'}`}
               >
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full text-left px-6 py-5 flex justify-between items-center focus:outline-none group"
                 >
@@ -646,12 +654,12 @@ export default function Home() {
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
                   </div>
                 </button>
-                <div 
-                  className={`px-6 transition-all duration-300 ease-in-out ${openFaq === index ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'}`}
-                >
-                  <div className="h-px w-full bg-gradient-to-r from-transparent via-[#e9d5ff] to-transparent mb-4"></div>
-                  <p className="text-[#6b21a8]/80 leading-relaxed text-[15px]">{faq.answer}</p>
-                </div>
+                {openFaq === index && (
+                  <div className="px-6 pb-6 animate-fade-in">
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-[#e9d5ff] to-transparent mb-4"></div>
+                    <p className="text-[#6b21a8]/80 leading-relaxed text-[15px]">{faq.answer}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -663,8 +671,8 @@ export default function Home() {
       <footer className="border-t border-[#e9d5ff] bg-white py-12 px-6">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <img src="https://progressive.motherhoodivf.com/favicon.svg" alt="Logo" className="w-6 h-6 grayscale opacity-60" />
-            <span className="font-semibold text-[#4c2d6b]/70">Progressive Motherhood IVF</span>
+            <img src="https://www.motherhoodindia.com/wp-content/uploads/2019/02/Apple.png" alt="Logo" className="w-6 h-6 grayscale opacity-60 rounded-full" />
+            <span className="font-semibold text-[#4c2d6b]/70">Motherhood Hospital, Electronic City</span>
           </div>
           <div className="text-sm font-medium text-[#6b21a8]/60 flex flex-wrap justify-center gap-8">
             <a href="#" className="hover:text-[#9333ea] transition-colors">Privacy Policy</a>
@@ -687,6 +695,9 @@ export default function Home() {
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
+        }
+        html {
+          scroll-behavior: smooth;
         }
         @keyframes float {
           0% { transform: translateY(0px); }

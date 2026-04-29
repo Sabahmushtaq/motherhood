@@ -9,6 +9,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Allow hot module replacement for devices on the local network
+  allowedDevOrigins: ['192.168.1.3'],
 };
 
 export default nextConfig;
